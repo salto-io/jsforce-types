@@ -6,6 +6,5 @@
     "type": "git",
     "url": "https://github.com/salto-io/jsforce-types"
   },
-  "types": "./index.d.ts",
   "main": "./index.d.ts"
 }

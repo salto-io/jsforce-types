@@ -3,10 +3,10 @@ import * as stream from 'stream';
 import * as express from 'express';
 import * as glob from 'glob';
 
-import * as sf from 'jsforce';
-import { RecordReference, Record } from 'jsforce/record';
-import { SObject } from 'jsforce/salesforce-object';
-import { RecordResult } from 'jsforce/record-result';
+import * as sf from 'jsforce-types';
+import { RecordReference, Record } from 'jsforce-types/record';
+import { SObject } from 'jsforce-types/salesforce-object';
+import { RecordResult } from 'jsforce-types/record-result';
 
 const salesforceConnection: sf.Connection = new sf.Connection({
     instanceUrl: '',

@@ -1,4 +1,4 @@
-// Type definitions for jsforce-types Salto extension
+// Additional type definitions for jsforce
 // Project: https://github.com/salto-io/jsforce-types
 // TypeScript Version: 2.3
 

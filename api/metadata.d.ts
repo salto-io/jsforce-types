@@ -2,6 +2,7 @@ import { Callback, Connection } from '../connection';
 import { EventEmitter } from 'events';
 import { Stream } from 'stream';
 import { Buffer } from 'buffer';
+import { PicklistEntry } from '../describe-result';
 
 interface DeployResult {
     id: string;
@@ -112,14 +113,6 @@ interface DeployOptions {
     runTests?: string[];
     singlePackage?:	boolean;
 }
-
-interface PicklistEntry {
-    active: boolean;
-    defaultValue: boolean;
-    label: string;
-    validFor: string;
-    value: string;
-  }
 
   interface ValueTypeField {
     fields: ValueTypeField[];

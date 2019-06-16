@@ -1,6 +1,5 @@
 // Additional type definitions for jsforce
 // Project: https://github.com/salto-io/jsforce-types
-// TypeScript Version: 2.3
 
 export * from './api/analytics';
 export * from './api/chatter';

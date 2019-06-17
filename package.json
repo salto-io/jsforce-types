@@ -5,6 +5,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/salto-io/jsforce-types"
-  },
-  "main": "index.d.ts"
+  }
 }

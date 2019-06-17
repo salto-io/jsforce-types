@@ -1,6 +1,8 @@
 // Additional type definitions for jsforce
 // Project: https://github.com/salto-io/jsforce-types
 
+export as namespace jsforce_types
+
 export * from './api/analytics';
 export * from './api/chatter';
 export * from './api/metadata';

@@ -1,5 +1,5 @@
 {
-  "name": "jsforce-types",
+  "name": "jsforce_types",
   "version": "0.1.0",
   "description": "Salto's extended jsforce TypeScript types",
   "repository": {

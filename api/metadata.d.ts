@@ -132,7 +132,7 @@ interface DeployOptions {
     apiReadable: boolean;
     apiUpdatable: boolean;
     parentField: ValueTypeField;
-    ValueTypeFields: ValueTypeField[];
+    valueTypeFields: ValueTypeField[];
   }
 
 export class AsyncResultLocator<T> extends EventEmitter implements PromiseLike<T> {

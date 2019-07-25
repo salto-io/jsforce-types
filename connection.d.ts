@@ -8,6 +8,7 @@ import { Analytics } from './api/analytics';
 import { Chatter } from './api/chatter';
 import { Metadata } from './api/metadata';
 import { Apex } from './api/apex';
+import { Soap } from './api/soap';
 import { Bulk } from './bulk';
 import { Cache } from './cache'
 import { OAuth2, Streaming } from '.';
@@ -150,6 +151,7 @@ export class Connection extends BaseConnection {
     oauth2: OAuth2;
     streaming: Streaming;
     cache: Cache;
+    soap: Soap;
 
     // Specific to Connection
     instanceUrl: string;

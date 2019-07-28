@@ -60,6 +60,11 @@ export interface ChildRelationship {
     restrictedDelete: boolean;
 }
 
+export interface DefaultValueWithType {
+    $: Record<string, string>;
+    _: string;
+}
+
 export interface Field {
     aggregatable: boolean;
     autonumber: boolean;
@@ -72,7 +77,7 @@ export interface Field {
     controllerName?: maybe<string>;
     createable: boolean;
     custom: boolean;
-    defaultValue?: maybe<string | boolean>;
+    defaultValue?: maybe<string | boolean | number | DefaultValueWithType>;
     defaultValueFormula?: maybe<string>;
     defaultedOnCreate: boolean;
     dependentPicklist: boolean;

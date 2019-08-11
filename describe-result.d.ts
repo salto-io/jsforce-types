@@ -67,7 +67,7 @@ export interface DefaultValueWithType {
 
 export interface Field {
     aggregatable: boolean;
-    autonumber: boolean;
+    autoNumber: boolean;
     byteLength: number;
     calculated: boolean;
     calculatedFormula?: maybe<string>;

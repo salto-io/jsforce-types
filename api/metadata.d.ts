@@ -148,7 +148,12 @@ export class AsyncResultLocator<T> extends EventEmitter implements PromiseLike<T
     finally(onfinally?: () => void): Promise<T>;
 }
 
-export class DeployResultLocator<T> extends AsyncResultLocator<T> {}
+export class DeployResultLocator<T> extends AsyncResultLocator<T> {
+    complete(includeDetails?: boolean, callback?: Callback<T>): Promise<T>
+    // The following overload is not really implemented but if we don't include it typescript
+    // will not allow us to say this class extends AsyncResultLocator
+    complete(callback?: Callback<T>): Promise<T>
+}
 export class RetrieveResultLocator<T> extends AsyncResultLocator<T> {}
 
 export class Metadata {
@@ -175,7 +180,7 @@ export class Metadata {
 
     deleteSync(type: string, fullNames: string | string[], callback?: Callback<SaveResult | Array<SaveResult>>): Promise<SaveResult | Array<SaveResult>>;
 
-    deploy(zipInput: Stream | Buffer | string, options: DeployOptions, callback?:Callback<AsyncResult>): DeployResultLocator<AsyncResult>;
+    deploy(zipInput: Stream | Buffer | string, options: DeployOptions, callback?:Callback<DeployResult>): DeployResultLocator<DeployResult>;
 
     describe(version?: string, callback?: Callback<DescribeMetadataResult>): Promise<DescribeMetadataResult>;
 
@@ -189,7 +194,7 @@ export class Metadata {
 
     rename(type: string, oldFullName: string, newFullName: string, callback?: Callback<SaveResult>): Promise<SaveResult>
 
-    retrieve(request: RetrieveRequest, callback: Callback<AsyncResult>): RetrieveResultLocator<AsyncResult>
+    retrieve(request: RetrieveRequest, callback: Callback<RetrieveResult>): RetrieveResultLocator<RetrieveResult>
 
     update(type: string, updateMetadata: MetadataInfo | Array<MetadataInfo>, callback?: Callback<SaveResult | Array<SaveResult>>): Promise<SaveResult | Array<SaveResult>>
 

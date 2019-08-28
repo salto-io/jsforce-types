@@ -4,12 +4,35 @@ import { Stream } from 'stream';
 import { Buffer } from 'buffer';
 import { PicklistEntry } from '../describe-result';
 
+interface DeployMessage {
+    changed: boolean
+    columnNumber: number
+    componentType: string
+    created: boolean
+    createdDate: string
+    deleted: boolean
+    fileName: string
+    fullName: string
+    id: string
+    lineNumber: number
+    problem: string
+    problemType: string
+    success: boolean
+}
+
+interface DeployDetails {
+    componentFailures?: DeployMessage[]
+    componentSuccesses?: DeployMessage[]
+    retrieveResult?: RetrieveResult
+    runTestResult?: object
+}
+
 interface DeployResult {
     id: string;
     checkOnly: boolean;
     completedDate: string;
     createdDate: string;
-    details?: object[];
+    details?: DeployDetails[];
     done: boolean;
     errorMessage?: string;
     errorStatusCode?: string;

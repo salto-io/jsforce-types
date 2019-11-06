@@ -55,6 +55,7 @@ export interface ConnectionOptions extends PartialOAuth2Options {
     sessionId?: string;
     signedRequest?: string | Object;
     version?: string;
+    requestModule?: Object;
 }
 
 export interface UserInfo {

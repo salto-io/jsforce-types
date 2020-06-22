@@ -2,6 +2,7 @@ import { Stream, Writable } from 'stream';
 
 import { RecordResult } from './record-result';
 import { Record } from './record';
+import { Job } from './job';
 
 export interface BatchInfo {
     id: string;
@@ -19,6 +20,7 @@ export interface BatchResultInfo {
 }
 
 export class Batch extends Writable {
+    job: Job
     check(callback?: (batchInfo: BatchInfo) => void): Promise<BatchInfo>;
     execute(input?: Record[] | Stream | string, callback?: (err: Error, result: RecordResult[] | BatchResultInfo[]) => void): Batch;
     poll(interval: number, timeout: number): void;

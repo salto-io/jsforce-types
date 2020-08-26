@@ -2,9 +2,9 @@
 // Project: https://github.com/salto-io/jsforce-types
 
 export * from './api/analytics';
+export * from './api/apex';
 export * from './api/chatter';
 export * from './api/metadata';
-export * from './api/apex';
 export * from './api/soap';
 export * from './batch';
 export * from './bulk';
@@ -14,6 +14,7 @@ export * from './connection';
 export * from './date-enum';
 export * from './describe-result';
 export * from './job';
+export * from './limits-info';
 export * from './oauth2';
 export * from './promise';
 export * from './query';
@@ -23,4 +24,4 @@ export * from './salesforce-id';
 export * from './salesforce-object';
 export * from './streaming';
 export * from './topic';
-export * from './limits-info';
+export * from './date';

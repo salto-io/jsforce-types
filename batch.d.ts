@@ -9,6 +9,9 @@ export interface BatchInfo {
     jobId: string;
     state: string;
     stateMessage: string;
+    numberRecordsProcessed: string;
+    numberRecordsFailed: string;
+    totalProcessingTime: string;
 }
 
 export interface BatchResultInfo {

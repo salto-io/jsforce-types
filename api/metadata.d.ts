@@ -132,10 +132,15 @@ interface RetrieveMessage {
 }
 
 interface RetrieveResult {
+    done?: string;
+    errorMessage?: string;
+    errorStatusCode?: string;
     fileProperties: FileProperties[];
     id: string;
     messages: RetrieveMessage[];
-    zipFile: string
+    status?: string;
+    success?: string;
+    zipFile: string;
 }
 
 interface SaveResult {

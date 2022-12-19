@@ -283,6 +283,11 @@ export class Metadata {
         callback?:Callback<DeployResult>
     ): DeployResultLocator<DeployResult>;
 
+    deployRecentValidation(
+        validationId: string,
+        callback?:Callback<DeployResult>
+    ): DeployResultLocator<DeployResult>;
+
     describe(version?: string, callback?: Callback<DescribeMetadataResult>): Promise<DescribeMetadataResult>;
 
     describeValueType(
